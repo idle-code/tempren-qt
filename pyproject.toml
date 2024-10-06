@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "tempren-qt"
+version = "0.1.0"
+description = "QT-based GUI to the tempren utility"
+authors = ["Pawel Zukowski <p.z.idlecode@gmail.com>"]
+homepage = "https://github.com/idle-code/tempren-qt"
+license = "GPL-3.0-or-later"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+PySide6 = "^6.7.3"
+tempren = {extras = ["video"], version = "^1.2.0"}
+
+[tool.poetry.scripts]
+tempren-qt = "tempren_qt.gui:throwing_main"
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
